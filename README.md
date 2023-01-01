@@ -55,6 +55,7 @@ https://drive.google.com/drive/u/1/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6
 
  
 Download the Web Platform Installer and open it
+  
 Now add and install MySQL 5.5 and add all the version of x86 PHP up until 7.3
 
 (Note: MySQL 5.5 will ask credintials to be created later)
@@ -65,9 +66,9 @@ Now add and install MySQL 5.5 and add all the version of x86 PHP up until 7.3
 <p>
 
 
-Once the installation is complete then you will notice that some of the files are failed to install
+Once the installation is complete you will notice that some of the files are failed to install
 
-so we will need to install them manually
+We will need to install them manually
 
 
 
@@ -79,9 +80,9 @@ so we will need to install them manually
 
 Go to the google drive installation files link and download the following files: 
 
-Microsoft C++
+1. Microsoft C++
 
-PHP Manager for IIS
+2. PHP Manager for IIS
 
 
 
@@ -120,7 +121,7 @@ Rename "upload" folder to "osTicket"
 
 Now open IIS and restart the server 
 
-On the top right under the Connections menu  go to Vm2/Sites/Default Web Site/osTicket
+On the Connections menu go to Vm2\Sites\default Web Site\osTicket
 
 Click on "Browse *:80 (http)" on the right hand side of the screen
 
@@ -139,7 +140,7 @@ Click on "Browse *:80 (http)" on the right hand side of the screen
 
 
 
-The osTicket installer will pop up in the default browser of your virtual machine once you click on "Browse *:80 (http)
+The osTicket installer will pop up in the default browser of your virtual machine once you click on "Browse *:80 (http)"
 
 
 
@@ -154,9 +155,9 @@ The osTicket installer will pop up in the default browser of your virtual machin
 
 
 
-Before we continue to install osTicket we will have to enable some extensions in the PHP manager and assign some permissions
+Before we continue to install osTicket we will have to enable some extensions in the PHP manager and assign permissions for ost-config.php
 
-Go back to IIS and go to VM2/sites/Default Web Site/osTicket
+Go back to IIS and go to VM2 >sites >Default Web Site >osTicket
 
 Open PHP Manager and under PHP Extensions, click on "enable or disable an extension"
 
@@ -175,16 +176,45 @@ Enable the following extensions:
 </p>
 <p>
 
+  
+Once you enable the extenstions go back to the osTicket installer browser and refresh the browser
+
+Observe any changes 
+ 
 
 
 
-<img src="https://i.imgur.com/YdFg6NP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+<img src="https://i.imgur.com/7bCdahE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <p>
 
+  
+  
+Rename:
+	From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+	To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+  
+
+  
+  Next assign permissions to ost-config:
+  
+ 1. Disable Inheritance- Right click on ost-config.php, go to Properties >Security >Advanced >Disable Inheritance >Remove all inherited permissions from this object
+ 2. Add Permissions- Go to properties >Security >Advanced >Add >Select a principal, Enter "Everyone" and allow them to Full Control
+  
+  
+
+  
+  
+
+  
+  
+  
 
 
-<img src="https://i.imgur.com/CBnZecV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>                                                                                                 
+
+<img src="https://i.imgur.com/AUhKkMR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>                                                                                                 
 
 
 
@@ -199,7 +229,23 @@ Enable the following extensions:
 
 
 
-<img src="https://i.imgur.com/mRV7b39.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>                                                                                                  
+<img src="https://i.imgur.com/pUkT9EX.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+Once you disable inheritance and assign permissions we are ready to begin the installaion process of the osTicket
+  
+Name the help desk and fill in the required information
+  
+Before 
+
 
 
 
