@@ -2,10 +2,10 @@
 <img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
 </p>
 
-<h1>osTicket - Prerequisites and Installation</h1>
+<h1>osTicket - Installation</h1>
 This tutorial outlines the prerequisites and installation of the open-source help desk ticketing system osTicket.<br />
 
-<h2>Environments and Technologies Used</h2>
+<h2> Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
@@ -243,8 +243,13 @@ Rename:
 Once you disable inheritance and assign permissions we are ready to begin the installaion process of the osTicket
   
 Name the help desk and fill in the required information
+
+Before we fill out the Database connection information we will have to install and setup the HeidiSQL
+
+Download HeidiSQL from the installation files
+
+
   
-Before 
 
 
 
@@ -254,7 +259,56 @@ Before
 
 
 
-<img src="https://i.imgur.com/DuGnMMJ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/A9TgxkM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Once you install the HeidiSQL create a new connection and name it "osTicket"
+
+
+While setting up the connection it will ask you for a password, enter the password that you created at the installtion of MySQL
+
+
+<img src="https://i.imgur.com/wNFkzon.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Once you are done with the setup go back to osTicket installer in the bowser and complete the Database connection information
+
+Set the name as "osTicket"
+
+Set the username and password same as mySQL
+
+
+
+<img src="https://i.imgur.com/26qSHMa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Install the osTicket
+
+
+
+<img src="https://i.imgur.com/LWz3hwP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Congratulations! Your osTicket installation is sucessfully completed 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 
 
